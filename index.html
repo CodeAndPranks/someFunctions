@@ -3,36 +3,18 @@
 <head>
     <title>jsFunctions&#128272;</title>      
     <meta charset="utf-8">
-    <style>
-        body {
-            transition: transform 0.5s; /* Smooth transition for the rotation */
-            background-color: red; 
-              text-align: center; 
-        }
-
-        html {
-            animation: adjustHue 20s alternate infinite;
-        }
-
-        @keyframes adjustHue {
-            0% { filter: hue-rotate(360deg); }
-        }
-
-        h1 { color: coral !important; }
-        h2 { color: pink !important; }
-        h4 { color: green !important; }
-       
-    </style> 
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Responsive design -->
 </head>
-<body>
-<h3 id="h3" style="margin-top: 20px;"> 🖐  👀 </h3>
-    <h1 id="demo">Some  CSS & js functions with test-button's.</h1>
+<bodystyle="background-color: red;" >
+<center><h3 id="h3" style="margin-top: 20px;"> 🖐  👀 </h3>
+    <h1 id="demo">Some  CSS & js functions with test-button's.</h1></center>
 
    <div id="text"></div>
   <div id="btns">  
     <button onclick="mirrorPage()" ontouchstart="mirrorPage()">Mirror Page</button> ... 
     <button onclick="spinnPage()"ontouchstart="spinnPage()">SpinnPage</button> ...
      <button onclick="MesseUP()"ontouchstart="MesseUP()">MessUP</button> ...
+    <button onclick="ColorFlah()"ontouchstart="ColorFlah()">Color Flash</button> ...
     <button onclick="rotate360Degrees()"ontouchstart="rotate360Degrees()">360 Degrees</button> ....
      <button onclick="go_empty()" ontouchstart="go_empty()">Go Empty </button> ...
     <button style="background-color: white;" onclick="freeze()"ontouchstart="freeze()">Freeze⚠️</button>
@@ -63,12 +45,14 @@
   function spinnPage () {
 document.documentElement.style.transitionDuration="5s";document.documentElement.style.transitionTimingFunction="ease-in";
 document.documentElement.style.transform="rotate(3600deg)";
-  }   
-    
-  function MesseUP () {
+  }  
+function MesseUP () {
  alert("tomorrow");
-}
-
+}       
+  function   ColorFlah () {
+ window.location.href="color.html";
+ }  
+     
    //Rotation-360 dgs FUNTION
  function rotate360Degrees () {
            
