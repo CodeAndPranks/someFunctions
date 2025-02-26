@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>jsFunctions&#128272;</title>      
+    <meta charset="utf-8">
+    <style>
+        body {
+            transition: transform 0.5s; /* Smooth transition for the rotation */
+            background-color: red; 
+              text-align: center; 
+        }
+
+        html {
+            animation: adjustHue 20s alternate infinite;
+        }
+
+        @keyframes adjustHue {
+            0% { filter: hue-rotate(360deg); }
+        }
+
+        h1 { color: coral !important; }
+        h2 { color: pink !important; }
+        h4 { color: green !important; }
+       
+    </style> 
+</head>
+<body>
+
+    <h3 id="h3"> 🖐  👀 </h3>    
+    <h1 id="demo">Some  CSS & js functions with test-button's.</h1>
+  <div id="text" ></div>
+   
+    <img id="img1" src="vinkel.jpg"><img  id="img2"src="b5.jpg" style=float:right>
+  <div id="btns">  
+    <button onclick="mirrorPage()">Mirror Page</button> ... 
+    <button onclick="spinnPage()">SpinnPage</button> ...
+
+    <button onclick="rotate180Degrees()">180 Degrees</button> ....
+     <button onclick="go_empty()">Go Empty </button> ...
+    <button style="background-color: red;" onclick="freeze()">Freeze⚠️</button>
+
+   
+ </div>
+    <script>
+ //FIRST FUNTION
+     function mirrorPage () {
+            document.body.style.transform = "scaleX(-1)";
+            setTimeout(function() {
+   // Second mirror
+                document.body.style.transform = "scaleX(1)";
+            }, 500); 
+   // Third mirror
+            setTimeout(function() {
+                document.body.style.transform = "scaleX(-1)";
+            }, 1000);
+
+            // Reload the page after 2 seconds from the start
+            setTimeout(function() {
+                location.reload(); // Reload the page after 2 seconds
+            }, 2000);
+        }
+ //NEXT FUNCTION
+function go_empty () {      
+  alert("was thath so clever ?")
+  document.body.style.backgroundColor="black"
+  demo.innerHTML="EMPTY HARD DISK"
+  demo.style.color="white"
+  img1.style.display="none"
+  img2.style.display="none"    
+  btns.style.display="none"  
+  h1.style.display="none"  
+  h3.style.display="none"  
+  
+    let timePerLetter = 40,
+    text = document.createTextNode('');
+
+    document.getElementById("text").appendChild(text);
+    document.getElementById("text").style.color="white"
+  //  document.body.style.backgroundColor="black"
+
+function printOut(str) {
+   var i = 0;
+   (function main() {
+    var char = str[i++];
+    text.nodeValue += char;
+if(i < str.length)
+   setTimeout(main, timePerLetter);
+ else
+   setTimeout(function() {
+     text.nodeValue = ""
+     demo.innerHTML = ""
+   
+     document.body.style.backgroundColor="grey"
+  }, 2000);  
+  })();
+}
+printOut("...Your hardisk is empty please install a OS before you can use this unit\n All Coyrihgts reserved by \nFed.11/99-ADv/SACR.USA Dist.of.Alabm 047\n \nHP Internactional,Sacramento,California USA. ")
+}
+ //NEXT FUNTION
+ function rotate180Degrees () {
+           
+ // First rotation
+            document.body.style.transform = "rotate(0deg)";
+            setTimeout(function() {
+                document.body.style.transform = "rotate(120deg)"; 
+            }, 500); // 500 milliseconds
+ // secound rotation
+            setTimeout(function() {
+                document.body.style.transform = "rotate(240deg)"; 
+            }, 1000); // 500ms after the first.
+ // third rotation
+            setTimeout(function() {
+                document.body.style.transform = "rotate(360deg)";
+            }, 1500); // 500ms after the second.
+
+            // Reload the page after 2 seconds from the start
+            setTimeout(function() {
+                location.reload(); 
+            }, 3000);        
+         }
+   //NEXT  IS FUNCTION   
+   function freeze () { 
+  onbeforeunload = () => true;
+  setTimeout(function(){
+    while(1)location.reload(1)
+  },1000)
+}
+  function colorFlash () {
+ // window.location.href="test.html"
+  }
+  
+  function spinnPage () {
+document.documentElement.style.transitionDuration="60s";document.documentElement.style.transitionTimingFunction="ease-in";
+document.documentElement.style.transform="rotate(360000deg)";
+  }
+  </script>
+</body>
+</html>
+
