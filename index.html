@@ -127,11 +127,12 @@ printOut("...Your hardisk is empty please install a OS before you can use this u
   function colorFlash () {
  // window.location.href="test.html"
   }
-  
-  function spinnPage () {
-document.documentElement.style.transitionDuration="60s";document.documentElement.style.transitionTimingFunction="ease-in";
-document.documentElement.style.transform="rotate(360000deg)";
-  }
+    function spinnPage() {   //Number of Spins = Total Degrees/360​[this page will spin 10 times in 5 seconds]
+    document.documentElement.style.transitionDuration = "5s"; // Set duration time.
+    document.documentElement.style.transitionTimingFunction = "ease-in";
+    document.documentElement.style.transform = "rotate(3600deg)"; 
+
+
   </script>
 </body>
 </html>
