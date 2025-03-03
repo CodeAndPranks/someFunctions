@@ -3,13 +3,18 @@
 <head>
     <title>jsFunctions&#128272;</title>      
     <meta charset="utf-8">
-     <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Responsive design -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+.button-container {
+            display: flex;
+            gap: 10px; 
+    </style>
 </head>
 <body style="background-color: red;" >
 <center><h3 id="h3" style="margin-top: 20px;"> 🖐  👀 </h3>
     <h1 id="demo">Some  CSS & js functions with test-button's.</h1></center>
 
-   <div id="text"></div>
+   <div class="button-container" id="text"></div>
   <div id="btns">  
     <button onclick="mirrorPage()" ontouchstart="mirrorPage()">Mirror Page</button> ... 
     <button onclick="spinnPage()"ontouchstart="spinnPage()">SpinnPage</button> ...
