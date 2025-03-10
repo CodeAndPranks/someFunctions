@@ -55,14 +55,34 @@
             }, 2000);
         }
         
-     //Spinn faste-and-faster FUNCTION 
+ //Spinn faste-and-faster FUNCTION 
   function spinnPage () {
 document.documentElement.style.transitionDuration="5s";document.documentElement.style.transitionTimingFunction="ease-in";
 document.documentElement.style.transform="rotate(3600deg)";
-  }  
- UPsideDown () {
+  }                
 
-}       
+//Turn 180 and then a return-button-pop up.
+function UPsideDown () {
+    //  Upside-Down transformation
+    ['', '-ms-', '-webkit-', '-o-', '-moz-'].forEach(function(prefix) {
+        document.body.style[prefix + 'transition'] = 'transform 4s';
+        document.body.style[prefix + 'transform'] = 'rotate(180deg)';
+    });
+ 
+     document.getElementById("resetImg").style.display="inline";
+}
+   
+function resetPage () {
+       // Reset the transformation
+        ['', '-ms-', '-webkit-', '-o-', '-moz-'].forEach(function(prefix) {
+            document.body.style[prefix + 'transform'] = 'rotate(0deg)';
+        });
+        document.getElementById("resetImg").style.display="none";
+       //  document.getElementById("turnBtn").style.display="inline";
+}
+    document.getElementById("resetImg").style.display="none";
+      
+//A petty nice CSS color show :    
   function   ColorFlah () {
  window.location.href="color.html";
  }  
