@@ -7,7 +7,7 @@
      <style>
 .button-container {
             display: flex;
-            gap: 10px; 
+            gap: 15px; 
 }
     </style>
 </head>
@@ -20,7 +20,7 @@
 <div class="button-container" id="btns">  
     <button onclick="mirrorPage()" ontouchstart="mirrorPage()">Mirror Page</button> 
     <button onclick="spinnPage()" ontouchstart="spinnPage()">SpinnPage</button> 
-     <button id="turnBtn" style="background-color: green; color: white;" onclick="UPsideDown()" ontouchstart="UPsideDown()">Turn</button>
+     <button id="turnBtn"  onclick="UPsideDown()" ontouchstart="UPsideDown()">Turn</button>
     <button onclick="ColorFlah() "ontouchstart="ColorFlah()">Color Flash</button> 
     <button onclick="rotate360Degrees() "ontouchstart="rotate360Degrees()">360 Degrees</button> 
      <button onclick="go_empty()" ontouchstart="go_empty()">Go Empty </button> 
@@ -33,11 +33,12 @@
   <style>
 .button-container {
     display: flex;        /* Use flexbox layout */
-    gap: 10px;           /* Set gap between buttons */
+    gap: 15px;           /* Set gap between buttons */
     flex-wrap: wrap;     /* Allow buttons to wrap if needed */
+}
 <style>      
 <script>
- //Mirror FUNTION
+ //Mirror & reset function.
      function mirrorPage () {
             document.body.style.transform = "scaleX(-1)";
             setTimeout(function() {
@@ -57,11 +58,12 @@
         
  //Spinn faste-and-faster FUNCTION 
   function spinnPage () {
-document.documentElement.style.transitionDuration="5s";document.documentElement.style.transitionTimingFunction="ease-in";
+document.documentElement.style.transitionDuration="5s";
+document.documentElement.style.transitionTimingFunction="ease-in";
 document.documentElement.style.transform="rotate(3600deg)";
   }                
 
-//Turn 180 and then a return-button-pop up.
+//Turn smootly 180 and then a return-button-pop up.
 function UPsideDown () {
     //  Upside-Down transformation
     ['', '-ms-', '-webkit-', '-o-', '-moz-'].forEach(function(prefix) {
