@@ -11,24 +11,32 @@
 }
     </style>
 </head>
-<body style="background-color: red;" >
+<body style="background-color: red;">
 <center><h3 id="h3" style="margin-top: 20px;"> 🖐  👀 </h3>
-    <h1 id="demo">Some  CSS & js functions with test-button's.</h1></center>
-   
+    
+<h1 id="demo">Some  CSS & js functions with test-button's.</h1></center>
+ 
 <div id="text"></div>
 <div class="button-container" id="btns">  
     <button onclick="mirrorPage()" ontouchstart="mirrorPage()">Mirror Page</button> 
-    <button onclick="spinnPage()"ontouchstart="spinnPage()">SpinnPage</button> 
-     <button onclick="MesseUP()"ontouchstart="MesseUP()">MessUP</button> <br><br>
-    <button onclick="ColorFlah()"ontouchstart="ColorFlah()">Color Flash</button> 
-    <button onclick="rotate360Degrees()"ontouchstart="rotate360Degrees()">360 Degrees</button> 
+    <button onclick="spinnPage()" ontouchstart="spinnPage()">SpinnPage</button> 
+     <button id="turnBtn" style="background-color: green; color: white;" onclick="UPsideDown()" ontouchstart="UPsideDown()">Turn</button>
+    <button onclick="ColorFlah() "ontouchstart="ColorFlah()">Color Flash</button> 
+    <button onclick="rotate360Degrees() "ontouchstart="rotate360Degrees()">360 Degrees</button> 
      <button onclick="go_empty()" ontouchstart="go_empty()">Go Empty </button> 
-    <button style="background-color: white;" onclick="freeze()"ontouchstart="freeze()">Freeze⚠️</button>
- </div>
+    <button style="background-color: white;" onclick="freeze()" ontouchstart="freeze()">Freeze Crome,Edge etc⚠️</button>
+</div>
  <hr id="hr">
   <img id="img1" src="vinkel.jpg">
-    <img  id="img2" src="old.jpg" style=float:right>
-    <script>
+<img  id="img2" src="old.jpg" style=float:right>
+   <center> <img src="upImg.png" id="resetImg" style="background-color: white; display="none;"  onclick="resetPage()"></center>
+  <style>
+.button-container {
+    display: flex;        /* Use flexbox layout */
+    gap: 10px;           /* Set gap between buttons */
+    flex-wrap: wrap;     /* Allow buttons to wrap if needed */
+<style>      
+<script>
  //Mirror FUNTION
      function mirrorPage () {
             document.body.style.transform = "scaleX(-1)";
@@ -52,8 +60,8 @@
 document.documentElement.style.transitionDuration="5s";document.documentElement.style.transitionTimingFunction="ease-in";
 document.documentElement.style.transform="rotate(3600deg)";
   }  
-function MesseUP () {
- alert("tomorrow");
+ UPsideDown () {
+
 }       
   function   ColorFlah () {
  window.location.href="color.html";
