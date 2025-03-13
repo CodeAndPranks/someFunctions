@@ -1,0 +1,52 @@
+     body {
+            background-color: red;
+            text-align: center; 
+        }
+
+        .button-container {
+            display: flex;     
+            gap: 10px;           
+            flex-wrap: wrap;     
+            justify-content: center; 
+        } 
+
+        #resetImg, #img2 {
+            display: none;
+        }
+
+        button {
+            padding: 12px 24px; 
+            border: none;
+            border-radius: 5px;
+            color: white; 
+            font-size: 1rem; 
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s; 
+        }
+
+        #messUpBtn {
+            background-color: #FFFF00; /* yellow */
+            color: black;
+        }
+        #mirrorPageBtn {
+            background-color: #333333; /* dark grey */
+        }
+        #spinnPageBtn {
+            background-color: #4CAF50; /* Green */
+        }
+        #turnLeftBtn {
+            background-color: #2196F3; /* Blue */
+        }
+        #colorFlashBtn {
+            background-color: #FF9800; /* Orange */
+        }
+        #step360Btn {
+            background-color: #9C27B0; /* Purple */
+        }
+        #goEmptyBtn {
+            background-color: #FF5722; /* Deep Orange */
+        }
+        #freezeBtn {
+            background-color: #607D8B; /* Blue Grey */
+        }
