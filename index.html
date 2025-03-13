@@ -4,89 +4,29 @@
     <title>jsFunctions&#128272;</title>      
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            background-color: red;
-            text-align: center; 
-        }
-
-        .button-container {
-            display: flex;     
-            gap: 10px;           
-            flex-wrap: wrap;     
-            justify-content: center; 
-        } 
-
-        #resetImg, #img2 {
-            display: none;
-        }
-
-        button {
-            padding: 12px 24px; 
-            border: none;
-            border-radius: 5px;
-            color: white; 
-            font-size: 1rem; 
-            cursor: pointer;
-            margin: 10px;
-            transition: background-color 0.3s; 
-        }
-
-        #messUpBtn {
-            background-color: #FFFF00; /* yellow */
-            color: black;
-        }
-        #mirrorPageBtn {
-            background-color: #333333; /* dark grey */
-        }
-        #spinnPageBtn {
-            background-color: #4CAF50; /* Green */
-        }
-        #turnLeftBtn {
-            background-color: #2196F3; /* Blue */
-        }
-        #colorFlashBtn {
-            background-color: #FF9800; /* Orange */
-        }
-        #step360Btn {
-            background-color: #9C27B0; /* Purple */
-        }
-        #goEmptyBtn {
-            background-color: #FF5722; /* Deep Orange */
-        }
-        #freezeBtn {
-            background-color: #607D8B; /* Blue Grey */
-        }
-    </style>
+      <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h3 id="h3" style="margin-top: 20px;"> 🖐  👀 </h3>
     <h1 id="h1">Some CSS & js functions with test-button's.</h1>
      <center> <img id="img1" src="vinkel.jpg"> 
-     <img id="img2" src="MindFuck.png" ><br>
-  
-    </center> 
+     <img id="img2" src="MindFuck.png" >
+      <img src="turnLeft.png" id="resetImg" style="display: none;" onclick="resetPage()">
+  </center> 
     <div id="text"></div>
-    
-    <div class="button-container" id="buttons">
+    <div class="button-container" id="btns">
     <button id="mirrorPageBtn" onclick="mirrorPage()">Mirror</button>
     <button id="messUpBtn" onclick="messUp()">MessUp</button> 
     <button id="spinnPageBtn" onclick="spinnPage()">Spinner</button> 
-    <button id="turnLeftBtn" onclick="turnLeft()">Turn Left</button>
+    <button id="turnRightBtn" onclick="turnRight()">Turn Right</button>
     <button id="colorFlashBtn" onclick="colorFlash()">Color Flash</button> 
-    <button id="step360Btn" onclick="rotate360()">3•Step 360°</button> 
+    <button id="step360Btn" onclick="rotate360()">3 Step=360dgs</button> 
     <button id="goEmptyBtn" onclick="go_empty()">Go Empty</button> 
     <button id="freezeBtn" onclick="freeze()">Freeze⚠️</button> 
  </div>     
- 
-<center>
-        <img src="turnRight.png" id="resetImg" style="background-color:white; display: none;" ontouchstart="resetPage()" onclick="resetPage()">
-  </center>
     <script src="app.js"></script>
-    <p align="center">(<a href="https://github.com/CodeAndPranks/ ">To CodeAndPranks</a>)</p>
 </body>
 </html>
-
 
 
 
