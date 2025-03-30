@@ -170,7 +170,11 @@ document.documentElement.style.transform="rotate(3600deg)";
 
 
 //Function Freez is tested on Andriod phone & tablets from version 8 to 16.[11/03-2025] 
-//'wiew' try open a 2'nd script,a infinity-loop,while storages fills up and 'wiew's image freez unit..
-    function freeze () { 
-alert("For safety reasons moved to:\n https://codeandpranks.github.io/wiew");
+function  freez () {
+    var ok = confirm("This Freez Android Device,and some others,safe way\nDo You Want To Try ? "); 
+    if (ok) {
+        window.location.href = "faces.html";
+    } else {
+       
     }
+}
